@@ -1,0 +1,11 @@
+{
+    "name": "odannyc/google-image-search",
+    "description": "You're able to query google for images using Google's new Custom Search API.",
+    "authors": [
+        {
+            "name": "Danny Carrillo",
+            "email": "odannycx@gmail.com"
+        }
+    ],
+    "require": {}
+}
