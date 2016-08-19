@@ -1,0 +1,18 @@
+<?php
+/**
+ * @author Danny Carrillo <odannycx@gmail.com>
+ * @package google-image-search
+ * @file GoogleCreds.php
+ */
+namespace odannyc\tests;
+
+/**
+ * Class GoogleCreds. Where you put in your credentials for google.
+ *
+ * @package odannyc\tests
+ */
+class GoogleCreds
+{
+    public static $apiKey = 'Api key goes in here';
+    public static $cx = 'CX goes in here';
+}

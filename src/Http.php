@@ -24,11 +24,11 @@ class Http
 
     public function query($query)
     {
-        return $this->client->get($this->config->baseUrl, [
+        return $this->client->get($this->config->baseUrl, ['query' => [
             'q' => $query,
             'cx' => $this->config->cx(),
             'key' =>$this->config->apiKey(),
             'searchType' => 'image'
-        ]);
+        ]])->getBody();
     }
 }

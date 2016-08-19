@@ -18,7 +18,7 @@ class ImageSearch
      * @param $query
      * @return mixed
      */
-    public function search($query)
+    public static function search($query)
     {
         return Image::search($query);
     }
@@ -28,7 +28,7 @@ class ImageSearch
      *
      * @return null
      */
-    public function config()
+    public static function config()
     {
         return Config::instance();
     }

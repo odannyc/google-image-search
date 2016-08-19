@@ -8,6 +8,13 @@
         }
     ],
     "require": {
-        "guzzlehttp/guzzle": "^6.2"
+        "guzzlehttp/guzzle": "^6.2",
+        "phpunit/phpunit": "^5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "odannyc\\GoogleImageSearch\\": "src/",
+            "odannyc\\tests\\": "tests/"
+        }
     }
 }
