@@ -5,6 +5,8 @@
  */
 namespace odannyc\GoogleImageSearch;
 
+use GuzzleHttp\Client;
+
 /**
  * Class Http. Used for the http query.
  *
@@ -22,6 +24,11 @@ class Http
 
     public function query($query)
     {
-        return $this->client->get($this->config->baseUrl);
+        return $this->client->get($this->config->baseUrl, [
+            'q' => $query,
+            'cx' => $this->config->cx(),
+            'key' =>$this->config->apiKey(),
+            'searchType' => 'image'
+        ]);
     }
 }

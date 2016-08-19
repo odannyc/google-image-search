@@ -15,6 +15,7 @@ class Image
     public static function search($query)
     {
         $http = new Http(Config::instance());
-        return $http->query($query);
+
+        return json_decode((string) $http->query($query), true);
     }
 }
