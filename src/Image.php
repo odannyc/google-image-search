@@ -12,10 +12,15 @@ namespace odannyc\GoogleImageSearch;
  */
 class Image
 {
-    public static function search($query)
+    /**
+     * @param $query
+     * @param array $filters
+     * @return mixed
+     */
+    public static function search($query, $filters = [])
     {
         $http = new Http(Config::instance());
 
-        return json_decode((string) $http->query($query), true);
+        return json_decode((string) $http->query($query, $filters), true);
     }
 }

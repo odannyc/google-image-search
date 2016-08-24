@@ -16,11 +16,12 @@ class ImageSearch
      * Used to search for images.
      *
      * @param $query
+     * @param $filters
      * @return mixed
      */
-    public static function search($query)
+    public static function search($query, $filters = [])
     {
-        return Image::search($query);
+        return Image::search($query, $filters);
     }
 
     /**

@@ -22,13 +22,19 @@ class Http
         $this->client = new Client();
     }
 
-    public function query($query)
+    public function query($query, $filters)
     {
-        return $this->client->get($this->config->baseUrl, ['query' => [
+        $query = [
             'q' => $query,
             'cx' => $this->config->cx(),
             'key' =>$this->config->apiKey(),
             'searchType' => 'image'
-        ]])->getBody();
+        ];
+
+        foreach ($filters as $key => $filter) {
+            $query[$key] = $filter;
+        }
+
+        return $this->client->get($this->config->baseUrl, ['query' => $query])->getBody();
     }
 }
