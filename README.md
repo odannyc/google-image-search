@@ -21,6 +21,8 @@ Use composer to install
 Set your API and CX string using the config method:
 
 ```php
+use odannyc\GoogleImageSearch\ImageSearch;
+
 ImageSearch::config()->apiKey('API Goes Here');
 ImageSearch::config()->cx('CX Goes Here');
 ```
